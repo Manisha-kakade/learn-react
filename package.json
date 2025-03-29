@@ -1,0 +1,25 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "this is the react practice project",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manisha-kakade/learn-react.git"
+  },
+  "author": "Manisha Kakade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manisha-kakade/learn-react/issues"
+  },
+  "homepage": "https://github.com/Manisha-kakade/learn-react#readme",
+  "dependencies": {
+    "parcel": "^2.14.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

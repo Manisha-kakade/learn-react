@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    background-color: lightslategray;
+    box-shadow: 1px black;
+    height: 100px;
+}
+.header-container > ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0px 20px;
+}
+.header-container > ul > li{
+   font-size: 24px;
+}
+.logo-container{
+    width: 100px;
+    height: 100px;
+}
+.logo{
+    width: 100%;
+}
+.body{
+    padding: 10px;
+}
+.resto-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.resto-container{
+    padding: 5px;
+    width: 215px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.resto-container:hover{
+    border: 1px solid lightseagreen;
+    background-color: lightgrey;
+}
+.res-logo{
+    width: 100%;
+    border-radius: 10px;
+}
