@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/Manisha-kakade/learn-react#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
     "parcel": "^2.14.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.29.0",
+    "tailwindcss": "^4.1.4"
   }
 }
