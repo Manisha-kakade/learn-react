@@ -6,6 +6,8 @@ const MenuList = () => {
     const [resInfo, setResInfo]= useState(null);
     const [categoryList, setCategoryList] = useState();
     const {resId} = useParams();
+    const [showIndex, setShowIndex] = useState(0);
+
     useEffect(() => {
 
         fetchMenu();
@@ -29,7 +31,13 @@ const MenuList = () => {
             <h1 className="font-bold text-2xl">{resInfo?.cards[0]?.card?.card?.text}</h1>
             <h2>{resInfo?.cards[2]?.card?.card?.info?.cuisines.join(', ')} - {resInfo?.cards[2]?.card?.card?.info?.costForTwoMessage}</h2>
             <h3>{resInfo?.cards[2]?.card?.card?.info?.areaName} - {resInfo?.cards[2]?.card?.card?.info?.totalRatingsString}</h3>
-        {categoryList.map(category => <RestaurantCategory key={category?.card?.card?.title} data={category}/>)}
+        {categoryList.map((category, index) => 
+        <RestaurantCategory 
+        key={category?.card?.card?.title} 
+        data={category}
+        showItems={index === showIndex ? true : false}
+        setShowIndex={() => setShowIndex(index)}
+        />)}
             
         </div>
     )

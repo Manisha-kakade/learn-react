@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RestoCards from "./RestoCards";
 import { Link } from "react-router-dom";
+import userContext from "../utils/userContext";
 const Body = () => {
 const [listOfRestaurants, setListOfRestaurants] = useState([]);
+const {loggedInUser, setUserName} = useContext(userContext);
+console.log("loggedInUser", loggedInUser)
 
 useEffect(() => {
     fetchData(); 
@@ -19,6 +22,13 @@ console.log('listOfRestaurants::',listOfRestaurants)
     return (
         <div className="body">
             <div style={{padding:'10px'}}><h3>Search</h3></div>
+            <div>
+                <input 
+                className="border border-black p-2"
+                value={loggedInUser}
+                onChange={(e) => setUserName(e.target.value)}
+                />
+                </div>
 <div className="flex flex-wrap">
     {listOfRestaurants?.map((restaurant) => 
     <Link key={restaurant?.info?.id} to={`/restaurants/${restaurant?.info?.id}`}>
